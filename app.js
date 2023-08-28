@@ -86,10 +86,10 @@ numberOrBooleanArray = [24, true];
 // ========================================================================================
 //Object
 var user = {
-    username: "Samson",
-    age: 24,
-    isAdmin: false, //boolean only
-    //...dont add new property
+  username: "Samson",
+  age: 24,
+  isAdmin: false, //boolean only
+  //...dont add new property
 };
 user.username = "Sagar";
 // user.age = "twentyFour";
@@ -100,20 +100,20 @@ user.isAdmin = true;
 // {============================}
 var userObj;
 userObj = {
-    userName: "Samson",
-    age: 24,
-    isAdmin: true,
-    //   phoneNo: "+97688855",   // donot add new property
+  userName: "Samson",
+  age: 24,
+  isAdmin: true,
+  //   phoneNo: "+97688855",   // donot add new property
 };
 // console.log(userObj);
 // {============================}
 //Some object property which are not compulsory required
 var userObj2;
 userObj2 = {
-    userName: "manish",
-    age: 24,
-    isAdmin: false,
-    phone: "+977634563",
+  userName: "manish",
+  age: 24,
+  isAdmin: false,
+  phone: "+977634563",
 };
 // console.log(userObj2);
 // ========================================================================================
@@ -132,125 +132,256 @@ anyArray = ["samson", 24, true, {}, []];
 //any for Object
 var anyObj;
 anyObj = {
-    userName: false,
-    age: "twentyFour",
-    isAdmin: "false",
-    phone: 57549586,
+  userName: false,
+  age: "twentyFour",
+  isAdmin: "false",
+  phone: 57549586,
 };
 // console.log(anyObj);
 // ========================================================================================
 // ========================================================================================
 //FUNCTION
 var sayHi = function () {
-    // console.log("say hi"); //void
+  // console.log("say hi"); //void
 };
 var funReturnString = function () {
-    // console.log("Hello world");
-    return "Hello world";
+  // console.log("Hello world");
+  return "Hello world";
 };
 //
 var multiple = function (num) {
-    return num * 2;
+  return num * 2;
 };
 var multiple2 = function (num) {
-    return num * 2;
+  return num * 2;
 };
 var multiple3 = function (num) {
-    //   return num * 2;
-    //do sth and do not return anyths
-    // console.log(num);
+  //   return num * 2;
+  //do sth and do not return anyths
+  // console.log(num);
 };
 multiple3(4);
 //
 var sumNum = function (num1, num2, another) {
-    return another ? another + num1 + num2 : num1 + num2;
+  return another ? another + num1 + num2 : num1 + num2;
 };
 // console.log(sumNum(2, 4, 6));
 //
 //This function looks so ugly due to user Obj ,so we can use the Type Aliases
 var func = function (user) {
-    return user.username;
+  return user.username;
 };
 var betterFun = function (user) {
-    return user.username;
+  return user.username;
 };
 var User = {
-    username: "samsonTmg",
-    age: 24,
-    isAdmin: false,
+  username: "samsonTmg",
+  age: 24,
+  isAdmin: false,
 };
 var myFunc_write = function (num, str) {
-    // console.log(num + " times " + str);
+  // console.log(num + " times " + str);
 };
 myFunc_write(24, "samson");
 var myFunc2_write = function (num, str) {
-    return num + " times " + str;
+  return num + " times " + str;
 };
 var userWithTheme = {
-    username: "samson_user",
-    age: 24,
-    isAdmin: false,
-    theme: "dark",
-    //   theme: "pink"
+  username: "samson_user",
+  age: 24,
+  isAdmin: false,
+  theme: "dark",
+  //   theme: "pink"
 };
 // console.log(userWithTheme);
 var userWithThemeFun = function (user) {
-    // console.log(user.username);
+  // console.log(user.username);
 };
 userWithThemeFun(userWithTheme);
 var data = [
-    { username: "samson", email: "stmg@gmail.com", id: 3 },
-    { username: "samson2", email: "stmg2@gmail.com", id: 2 },
+  { username: "samson", email: "stmg@gmail.com", id: 3 },
+  { username: "samson2", email: "stmg2@gmail.com", id: 2 },
 ];
 var emp = {
-    username: "empname",
-    age: 24,
-    isAdmin: false,
-    employeeId: 2,
+  username: "empname",
+  age: 24,
+  isAdmin: false,
+  employeeId: 2,
 };
 // console.log(emp);
 var client = {
-    username: "clientname",
-    age: 24,
-    isAdmin: false,
+  username: "clientname",
+  age: 24,
+  isAdmin: false,
 };
 // console.log(client);
 var clientArray = [
-    {
-        username: "clientname_in_Array",
-        age: 24,
-        isAdmin: false,
-    },
-    {
-        username: "clientname_in_Array2",
-        age: 24,
-        isAdmin: false,
-    },
+  {
+    username: "clientname_in_Array",
+    age: 24,
+    isAdmin: false,
+  },
+  {
+    username: "clientname_in_Array2",
+    age: 24,
+    isAdmin: false,
+  },
 ];
 var IPost_write = {
-    id: 45,
-    title: "Ipost title",
-    desc: "IPost desc",
-    extra: [{ id: 2, title: "auth_title" }],
+  id: 45,
+  title: "Ipost title",
+  desc: "IPost desc",
+  extra: [{ id: 2, title: "auth_title" }],
 };
 var IbetterPost = {
-    id: 3,
-    title: "IbetterPost",
-    desc: " test IbettterPost",
-    extra: ["samson", "dhading", false, {}], //any[]
+  id: 3,
+  title: "IbetterPost",
+  desc: " test IbettterPost",
+  extra: ["samson", "dhading", false, {}], //any[]
 };
 var IEvenBetterPost = {
-    id: 5,
-    title: "EvenbetterPost",
-    desc: "writing even better Post",
-    extra: [{ id: 3, username: "samsonTmg" }],
+  id: 5,
+  title: "EvenbetterPost",
+  desc: "writing even better Post",
+  extra: [{ id: 3, username: "samsonTmg" }],
 };
 // console.log(IEvenBetterPost);
 var IEvenBetterPost2 = {
-    id: 5,
-    title: "EvenbetterPost",
-    desc: "writing even better Post",
-    extra: [{ id: 4, username: "samsontmg" }],
+  id: 5,
+  title: "EvenbetterPost",
+  desc: "writing even better Post",
+  extra: [{ id: 4, username: "samsontmg" }],
 };
-// console.log(IEvenBetterPost2);
-//=====================
+var student = {
+  name: "samson",
+  roll: 22,
+  age: 24,
+};
+var initialStates = {
+  posts: [{ postId: 1, title: "post one", body: "about mysellf" }],
+  status: true,
+};
+var users = [
+  {
+    name: "Samson",
+    age: 23,
+    admin: false,
+    address: {
+      city: "ktm",
+      state: "bagmati",
+    },
+    gender: "male",
+  },
+  {
+    name: "Sagar",
+    age: 23,
+    admin: true,
+    address: {
+      city: "ktm",
+      state: "bagmati",
+    },
+    gender: "male",
+  },
+];
+var teacher = {
+  name: "samson",
+  age: 39,
+  admin: true,
+  address: {
+    city: "ktm",
+    state: "bagmati",
+  },
+};
+var teachersData = {
+  teachersList: [
+    {
+      name: "samson",
+      age: 34,
+      admin: true,
+      address: {
+        city: "ktm",
+        state: "Bagmati",
+      },
+    },
+    {
+      name: "sagar",
+      age: 34,
+      admin: true,
+      address: {
+        city: "ktm",
+        state: "Bagmati",
+      },
+    },
+  ],
+  success: true,
+};
+var initialCartState = {
+  Items: [
+    {
+      product: {
+        id: 3,
+        name: "string",
+        price: 4,
+      },
+      quantity: 4,
+    },
+  ],
+};
+var patient = {
+  id: 2,
+  name: "string",
+  room: 3,
+  isAdmited: false,
+  address: [
+    {
+      city: "ktm",
+      state: "Baagmati",
+    },
+  ],
+};
+var patientsState = {
+  patients: [
+    {
+      patientList: [
+        {
+          id: 2,
+          name: "strinf",
+          room: 2,
+          isAdmited: false,
+          // address: ["ktm"], // if <string>
+          address: [
+            {
+              city: "ktm",
+              state: "bagmati",
+            },
+          ],
+        },
+      ],
+      totalPatient: 4,
+    },
+  ],
+};
+var patientsState2 = {
+  patients: [
+    {
+      patientList: [
+        {
+          id: 2,
+          name: "string",
+          room: 3,
+          isAdmited: false,
+          address: [
+            {
+              city: "string",
+              state: "string",
+              phone: 98565690, // <string><boolean><object> etc are not allowed // only <numbe> and <any> are allowded
+            },
+          ],
+        },
+      ],
+      totalPatient: 2,
+    },
+  ],
+};
+console.log(patientsState2);
+// ================================================================================================

@@ -432,4 +432,258 @@ const IEvenBetterPost2: EvenBetterPost<IAuthor> = {
 
 // console.log(IEvenBetterPost2);
 
-//=====================
+//======================================================================types==================================
+
+type studentInfo = {
+  name: string;
+  age: number;
+  roll: number;
+};
+
+const student: studentInfo = {
+  name: "samson",
+  roll: 22,
+  age: 24,
+};
+
+// console.log(student);
+
+//
+
+type post = {
+  postId: number;
+  title: string;
+  body: string;
+};
+
+type initial = {
+  posts: post[];
+  status: boolean;
+};
+
+const initialStates: initial = {
+  posts: [{ postId: 1, title: "post one", body: "about mysellf" }],
+  status: true,
+};
+
+// console.log(initialStates);
+
+// =======================================================================types======================
+
+type user = {
+  name: string;
+  age: number;
+  admin: boolean;
+  address: {
+    city: string;
+    state: string;
+  };
+  gender?: "male" | "female";
+};
+
+type usersList = user[];
+
+const users: usersList = [
+  {
+    name: "Samson",
+    age: 23,
+    admin: false,
+    address: {
+      city: "ktm",
+      state: "bagmati",
+    },
+    gender: "male",
+  },
+
+  {
+    name: "Sagar",
+    age: 23,
+    admin: true,
+    address: {
+      city: "ktm",
+      state: "bagmati",
+    },
+    gender: "male",
+  },
+];
+
+// console.log(users);
+
+//================================================= Interface================================================
+
+interface TeacherInterface {
+  name: string;
+  age: number;
+  admin: boolean;
+  address: {
+    city: string;
+    state: string;
+  };
+}
+
+const teacher: TeacherInterface = {
+  name: "samson",
+  age: 39,
+  admin: true,
+  address: {
+    city: "ktm",
+    state: "bagmati",
+  },
+};
+
+interface TeachersDataInterface {
+  teachersList: TeacherInterface[];
+  success: boolean;
+}
+
+const teachersData: TeachersDataInterface = {
+  teachersList: [
+    {
+      name: "samson",
+      age: 34,
+      admin: true,
+      address: {
+        city: "ktm",
+        state: "Bagmati",
+      },
+    },
+    {
+      name: "sagar",
+      age: 34,
+      admin: true,
+      address: {
+        city: "ktm",
+        state: "Bagmati",
+      },
+    },
+  ],
+  success: true,
+};
+
+// console.log(teachersData);
+
+// =======================================================interface=================================
+
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+}
+
+interface CartItem {
+  product: Product;
+  quantity: number;
+}
+
+interface CartState {
+  Items: CartItem[];
+}
+
+const initialCartState: CartState = {
+  Items: [
+    {
+      product: {
+        id: 3,
+        name: "string",
+        price: 4,
+      },
+      quantity: 4,
+    },
+  ],
+};
+
+// console.log(initialCartState.Items);
+
+// =====================================================================generic <T> 1==============================================
+
+interface Patient<T> {
+  id: number;
+  name: string;
+  room: number;
+  isAdmited: boolean;
+  address: T[];
+}
+
+const patient: Patient<object> = {
+  id: 2,
+  name: "string",
+  room: 3,
+  isAdmited: false,
+  address: [
+    {
+      city: "ktm",
+      state: "Baagmati",
+    },
+  ],
+};
+
+// console.log(patient);
+
+interface patientList<T> {
+  patientList: Patient<T>[];
+  totalPatient: number;
+}
+
+interface PatientsState<T> {
+  patients: patientList<T>[];
+}
+
+const patientsState: PatientsState<object> = {
+  patients: [
+    {
+      patientList: [
+        {
+          id: 2,
+          name: "strinf",
+          room: 2,
+          isAdmited: false,
+          // address: ["ktm"], // if <string>
+          address: [
+            {
+              city: "ktm",
+              state: "bagmati",
+            },
+          ],
+        },
+      ],
+      totalPatient: 4,
+    },
+  ],
+};
+
+// console.log(patientsState.patients[0].patientList);
+
+// ===========================================================================generic <T> 2===============================================
+
+interface userAddress<T extends number> {
+  city: string;
+  state: string;
+  phone?: T;
+}
+
+const patientsState2: PatientsState<userAddress<number>> = {
+  patients: [
+    {
+      patientList: [
+        {
+          id: 2,
+          name: "string",
+          room: 3,
+          isAdmited: false,
+          address: [
+            {
+              city: "string",
+              state: "string",
+              phone: 98565690, // <string><boolean><object> etc are not allowed // only <numbe> and <any> are allowded
+            },
+          ],
+        },
+      ],
+      totalPatient: 2,
+    },
+  ],
+};
+
+console.log(patientsState2);
+
+// ================================================================================================
